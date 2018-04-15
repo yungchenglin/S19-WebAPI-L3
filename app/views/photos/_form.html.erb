@@ -6,22 +6,29 @@
   </ul>
 <% end %>
 
-<%= form_for @photo do |f| %>
-  <%= f.label :title, "Title" %>
-  <%= f.text_field :title %>
+<div class="form container">
+  <%= form_for @photo do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
 
-  <%= f.label :date, "Date" %>
-  <%= f.text_field :date %>
+    <div class="form-group">
+      <%= f.label :date %>
+      <%= f.text_field :date, class: "form-control" %>
+    </div>
 
-  <%= f.label :description, "Description" %>
-  <%= f.text_area :description %>
+    <div class="form-group">
+     <%= f.label :description %>
+     <%= f.text_area :description, class: "form-control" %>
+   </div>
 
-  <%= f.label :file_location, "File Location" %>
-  <%= f.text_field :file_location %>
-  <%= f.file_field :file_location %>
+    <div class="form-group">
+     <%= f.label :file_location %>
+     <%= f.file_field :file_location, class: "form-control" %>
+   </div>
 
-  <%= f.submit %>
-
-
-<% end %>
+     <%= f.submit %>
+  <% end %>
+</div>
 
