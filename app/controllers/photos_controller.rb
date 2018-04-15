@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+  before_action :set_photo, :only => [:show, :edit, :update, :destroy]
 
   def index
     @photos = Photo.all
@@ -17,16 +18,7 @@ class PhotosController < ApplicationController
       end
   end
 
-  def show
-    @photo = Photo.find(params[:id])
-  end
-
-  def edit
-    @photo = Photo.find(params[:id])
-  end
-
   def update
-    @photo = Photo.find(params[:id])
       if @photo.update_attributes(photo_params)
         redirect_to photo_path(@photo)
      else
@@ -35,7 +27,6 @@ class PhotosController < ApplicationController
   end
 
   def destroy
-  @photo = Photo.find(params[:id])
   @photo.destroy
 
   redirect_to photos_url
