@@ -26,3 +26,5 @@ namespace :dev do
 
     puts "now you have #{User.count} users data"
   end
+
+end
