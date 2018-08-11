@@ -33,6 +33,7 @@ gem 'carrierwave'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'devise'
+gem 'rest-client'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
