@@ -7,5 +7,6 @@ class ApiController < ActionController::Base
       # sign_in 是 Devise 的方法
       sign_in(user, store: false) if user
     end
+  end
 
 end
